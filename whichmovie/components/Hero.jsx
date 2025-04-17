@@ -1,5 +1,5 @@
 import { useEffect , useState } from "react";
-import { Link, useParams } from "react-router-dom";
+
 
 const Hero =()=>{
 
@@ -20,12 +20,13 @@ const Hero =()=>{
 
     return(
         <div>
+            <h1>Which Movie Do You Want</h1>
             <div style={{display:"flex", justifyContent:"center", margin:"10px", padding:"10px" }} >
                 <div>
                     <input type="text"  value={searchResult} onChange={(e)=>{
                         setSearchResult(e.target.value)
                         getMovies();
-                    }} />
+                    }} placeholder="search movie.." />
                     <button type="submit" style={ 
                         {width:"60px", height:"30px", padding:"5px", margin: "5px" } }
                          onClick={()=>{
