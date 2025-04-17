@@ -10,7 +10,7 @@ const Details = () => {
         getDetails();
     },[])
     const getDetails = async()=>{
-        const data = await fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=a219683e`);    
+        const data = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=a219683e`);    
         const json = await data.json();
         setDetails(json);
         console.log(json)

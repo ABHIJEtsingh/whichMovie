@@ -12,7 +12,7 @@ const Hero =()=>{
     },[])
 
     const getMovies = async ()=>{
-        const data = await fetch(`http://www.omdbapi.com/?s=${searchResult}&apikey=a219683e`);
+        const data = await fetch(`https://www.omdbapi.com/?s=${searchResult}&apikey=a219683e`);
         const json = await data.json();
         setMovieList(json?.Search);
         console.log(movieList?.Search);
